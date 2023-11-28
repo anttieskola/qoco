@@ -19,8 +19,6 @@ The startup company values that the solution is working as expected and that the
 easy to follow, possibly even developed further in the future. Development of this first version
 shouldn’t take much longer than two hours.
 
-Please send the code and any other materials in one zip file to lassi.pesari@qoco.aero.
-
 # Solution
 
 API Input: Roman numeral string
