@@ -35,9 +35,19 @@ Used dotnet templates
 - xunit
 - webapi
 
-Stole sonarbuild script from my current own project.
+Stole sonarbuild script from my current own project and used same libraries etc...
 
 # Time spend
 - 1.5h for project structure (first commit)
     - Even tho I copied structure from my current own project it took some time to setup
+- 2.5h for the actual conversion logic, integration and unit testing
+    - thought the logic would be simple but it was not until figured out using list and
+    checking position and deciding if to add or subtract
 
+# Development environment
+- Debian 12
+- Dotnet 7.0
+- Visual Studio Code + many addons
+
+# Links
+- [Wikipedia](https://en.wikipedia.org/wiki/Roman_numerals)
