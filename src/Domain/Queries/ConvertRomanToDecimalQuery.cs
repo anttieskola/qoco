@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Security.Cryptography.X509Certificates;
-
-namespace QOCO.Domain.Queries;
+﻿namespace QOCO.Domain.Queries;
 
 public record ConvertRomanToDecimalQuery : IRequest<int>, IValidatableObject
 {
