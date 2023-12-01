@@ -56,4 +56,23 @@ public class ConvertRomanToDecimalQueryTests
             await handler.Handle(new ConvertRomanToDecimalQuery { RomanNumber = "antti" }, CancellationToken.None);
         });
     }
+
+    [Fact]
+    public async Task MaxValueTest()
+    {
+        // Arrange
+        var handler = new ConvertRomanToDecimalQueryHandler();
+
+        // act max
+        var romanNumber = new string('M', 256);
+        var value = await handler.Handle(new ConvertRomanToDecimalQuery { RomanNumber = romanNumber }, CancellationToken.None);
+        Assert.Equal(256000, value);
+
+        // act too long
+        romanNumber = new string('M', 257);
+        await Assert.ThrowsAsync<ValidationException>(async () =>
+        {
+            await handler.Handle(new ConvertRomanToDecimalQuery { RomanNumber = romanNumber }, CancellationToken.None);
+        });
+    }
 }

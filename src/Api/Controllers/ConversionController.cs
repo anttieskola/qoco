@@ -1,18 +1,31 @@
 namespace QOCO.Api.Controllers;
 
+/// <summary>
+/// Controller to convert number formats
+/// </summary>
 [ApiController]
 [Route("[controller]")]
-public class ConversionController : ControllerBase
+public class ConvertRomanToDecimal : ControllerBase
 {
     private readonly ISender _sender;
 
-    public ConversionController(
+    /// <summary>
+    /// Constructor
+    /// </summary>
+    /// <param name="sender">MediatR</param>
+    public ConvertRomanToDecimal(
         ISender sender)
     {
         _sender = sender;
     }
 
+    /// <summary>
+    /// Convert a decimal number to roman number
+    /// </summary>
+    /// <param name="romanNumber"></param>
+    /// <returns></returns>
     [HttpPost(Name = "RomanToDecimal")]
+    [ProducesResponseType(typeof(DecimalNumber), StatusCodes.Status200OK)]
     public async Task<IActionResult> RomanToDecimal([FromBody] RomanNumber romanNumber)
     {
         try

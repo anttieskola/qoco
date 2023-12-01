@@ -41,6 +41,7 @@ Stole sonarbuild script from my current own project and used same libraries etc.
 - 2.5h for the actual conversion logic, integration and unit testing
     - thought the logic would be simple but it was not until figured out using list and
     checking position and deciding if to add or subtract
+- 1h for fixes after evaluation
 
 # Development environment
 - Debian 12

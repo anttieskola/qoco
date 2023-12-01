@@ -16,6 +16,10 @@ public record ConvertRomanToDecimalQuery : IRequest<int>, IValidatableObject
         {
             yield return new ValidationResult("RomanNumber contains invalid characters", new[] { nameof(RomanNumber) });
         }
+        else if (RomanNumber.Length > 256)
+        {
+            yield return new ValidationResult("RomanNumber is too long", new[] { nameof(RomanNumber) });
+        }
     }
 }
 
